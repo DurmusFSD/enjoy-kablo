@@ -16,7 +16,7 @@ export default function Navbar() {
     href === "/" ? pathname === "/" : pathname.startsWith(href);
 
   return (
-    <header className="fixed top-0 w-full z-50 bg-on-secondary-fixed border-b border-on-secondary-fixed-variant shadow-[0_2px_4px_rgba(0,0,0,0.15)] h-[72px]">
+    <header className="fixed top-0 w-full z-50 bg-white border-b border-gray-200 shadow-[0_2px_4px_rgba(0,0,0,0.15)] h-[72px]">
       <div className="max-w-[1280px] mx-auto px-gutter flex justify-between items-center h-full">
         <Link href="/" className="flex items-center">
           <Image
@@ -35,9 +35,9 @@ export default function Navbar() {
             <div key={item.label} className="relative group">
               <Link
                 href={item.href}
-                className={`text-button uppercase tracking-wider text-on-primary pb-1 transition-all duration-200 ease-in-out border-b-2 ${isActive(item.href)
+                className={`text-button uppercase tracking-wider text-black pb-1 transition-all duration-200 ease-in-out border-b-2 ${isActive(item.href)
                   ? "border-primary-container"
-                  : "border-transparent hover:text-primary-fixed hover:border-primary-container"
+                  : "border-transparent  hover:border-primary-container"
                   } ${item.dropdown ? "inline-flex items-center gap-1" : ""}`}
               >
                 {item.label}
@@ -66,15 +66,15 @@ export default function Navbar() {
 
         {/* CTA */}
         <div className="flex items-center gap-stack-md">
-          <a
-            href={SITE_CONFIG.pdfCatalog}
+
+          <a href={SITE_CONFIG.pdfCatalog}
             download
             className="hidden lg:block bg-primary-container text-on-primary text-button uppercase px-6 py-3 hover:bg-primary transition-colors duration-200"
           >
             2026 Fiyat Listesi PDF
           </a>
           <button
-            className="md:hidden text-on-primary"
+            className="md:hidden text-black"
             onClick={() => setMobileOpen(!mobileOpen)}
             aria-label="Menü"
           >
@@ -85,15 +85,15 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       {mobileOpen && (
-        <div className="md:hidden bg-on-secondary-fixed border-t border-on-secondary-fixed-variant absolute top-full left-0 right-0">
+        <div className="md:hidden bg-white border-t border-gray-200 absolute top-full left-0 right-0">
           <ul className="py-2">
             {NAV_ITEMS.map((item) => (
-              <li key={item.label} className="border-b border-on-secondary-fixed-variant/50 last:border-0">
+              <li key={item.label} className="border-b border-gray-200 last:border-0">
                 {item.dropdown ? (
                   <>
                     <button
                       onClick={() => setMobileProductsOpen(!mobileProductsOpen)}
-                      className="w-full flex items-center justify-between px-5 py-4 text-button uppercase text-on-primary"
+                      className="w-full flex items-center justify-between px-5 py-4 text-button uppercase text-black"
                     >
                       {item.label}
                       <Icon
@@ -103,13 +103,13 @@ export default function Navbar() {
                       />
                     </button>
                     {mobileProductsOpen && (
-                      <ul className="bg-black/30">
+                      <ul className="bg-gray-50">
                         {item.dropdown.map((sub) => (
                           <li key={sub.href}>
                             <Link
                               href={sub.href}
                               onClick={() => setMobileOpen(false)}
-                              className="block px-8 py-3 text-body-md text-secondary-fixed-dim hover:text-primary-fixed"
+                              className="block px-8 py-3 text-body-md text-gray-700 hover:text-primary-fixed"
                             >
                               {sub.label}
                             </Link>
@@ -122,7 +122,7 @@ export default function Navbar() {
                   <Link
                     href={item.href}
                     onClick={() => setMobileOpen(false)}
-                    className="block px-5 py-4 text-button uppercase text-on-primary"
+                    className="block px-5 py-4 text-button uppercase text-black"
                   >
                     {item.label}
                   </Link>
@@ -130,8 +130,8 @@ export default function Navbar() {
               </li>
             ))}
             <li className="p-4">
-              <a
-                href={SITE_CONFIG.pdfCatalog}
+
+              <a href={SITE_CONFIG.pdfCatalog}
                 download
                 className="flex items-center justify-center bg-primary-container text-on-primary text-button uppercase px-6 py-3"
               >
