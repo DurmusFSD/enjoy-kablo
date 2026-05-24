@@ -504,9 +504,9 @@ export const categories: Category[] = [
     shortDescription: "800 AMP ve 1200 AMP profesyonel modeller",
     description:
       "Otomotiv ve ağır vasıta kullanımına yönelik, yüksek amperli akü takviye kabloları. 800 AMP ve 1200 AMP seçenekleri.",
-    image: "/images/products/category-aku.png",
+    image: "/images/products/category-aku.jpeg",
     features: ["600A - 1200A Seçenekleri", "Isınmaya Karşı Dayanıklı"],
-    heroImage: "/images/products/category-aku.png",
+    heroImage: "/images/products/category-aku.jpeg",
     heroFeatures: ["YÜKSEK AMPER", "İZOLELİ KROKODİL", "ISINMAYA DAYANIKLI"],
     highlights: COMMON_HIGHLIGHTS,
     gallery: COMMON_GALLERY,
@@ -537,9 +537,9 @@ export const categories: Category[] = [
     shortDescription: "Özel baskı fiş ve priz çözümleri",
     description:
       "Özel baskılı fiş ve priz üretimi. Markalama ve kurumsal kimlik için özel çözümler.",
-    image: "/images/products/aksesuar.jpg",
+    image: "/images/products/aksesuarr.jpeg",
     features: ["Hassas Enjeksiyon Kalitesi", "Özel Logo Baskı İmkanı"],
-    heroImage: "/images/products/category-aksesuar.jpg",
+    heroImage: "/images/products/aksesuarr.jpeg",
     heroFeatures: ["ÖZEL LOGO", "HASSAS ENJEKSİYON", "MİN. SİPARİŞ ADEDİ"],
     highlights: COMMON_HIGHLIGHTS,
     gallery: COMMON_GALLERY,
