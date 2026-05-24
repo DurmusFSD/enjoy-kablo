@@ -17,14 +17,15 @@ export default function Footer() {
           {/* Brand */}
           <div className="max-w-xl">
             <Link href="/" className="flex items-center mb-6">
-              <Image
-                src="/images/logo.png"
-                alt={SITE_CONFIG.name}
-                width={200}
-                height={60}
-                priority
-                className="h-22 w-auto object-contain"
-              />
+              <video
+            src="/video.mp4"
+            autoPlay
+            loop
+            muted
+            playsInline
+            preload="auto"
+            className="w-[200px] h-[60px] object-cover rounded-lg"
+          />
             </Link>
             <p className="text-body-md text-secondary-fixed-dim">
               Endüstriyel kablo üretiminde Türkiye&apos;nin güvenilir çözüm ortağı.
