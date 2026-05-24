@@ -19,13 +19,14 @@ export default function Navbar() {
     <header className="fixed top-0 w-full z-50 bg-white border-b border-gray-200 shadow-[0_2px_4px_rgba(0,0,0,0.15)] h-[72px]">
       <div className="max-w-[1280px] mx-auto px-gutter flex justify-between items-center h-full">
         <Link href="/" className="flex items-center">
-          <Image
-            src="/images/logo.png"
-            alt={SITE_CONFIG.name}
-            width={200}
-            height={60}
-            priority
-            className="h-22 w-auto object-contain"
+          <video
+            src="/video.mp4"
+            autoPlay
+            loop
+            muted
+            playsInline
+            preload="auto"
+            className="w-[200px] h-[60px] object-cover rounded-lg"
           />
         </Link>
 
