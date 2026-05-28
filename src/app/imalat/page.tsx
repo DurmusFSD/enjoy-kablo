@@ -6,6 +6,7 @@ import CertificatesSection from "@/components/imalat/CertificatesSection";
 import QualityPolicy from "@/components/imalat/QualityPolicy";
 import CapacitySection from "@/components/imalat/CapacitySection";
 import ProductionHero from "@/components/imalat/ProductionHero";
+import ProductionVideos from "@/components/imalat/ProductionVideos";
 
 export const metadata: Metadata = {
   title: "İmalat",
@@ -37,12 +38,19 @@ export default function ImalatPage() {
     },
   ];
 
+  const videos = [
+  { src: "/videos/video1.mp4", poster: "/images/logo.png" },
+  { src: "/videos/video2.mp4", poster: "/images/logo.png" },
+  { src: "/videos/video3.mp4", poster: "/images/logo.png" },
+];
+
   return (
     <>
     <ProductionHero/>
     <CapacitySection/>
       <QualityPolicy />
       <CertificatesSection />
+      <ProductionVideos videos={videos} totalCount={3} />
       <MachineGallery />
       <CTASection />
     </>
